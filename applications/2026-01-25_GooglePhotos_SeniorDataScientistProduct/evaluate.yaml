@@ -1,0 +1,14 @@
+company: "Google"
+position: "Senior Data Scientist, Product"
+location: "Sydney NSW, Australia"
+score: 95
+strengths:
+  - "Highly tailored summary explicitly mentioning Python tool development, deep learning, product innovation, user-centric problems, and Google Photos."
+  - "Strong 'Key Skills' section with specific Python libraries and robust Data Engineering & MLOps capabilities (Azure, Docker, CI/CD, HPC)."
+  - "Professional Experience bullet points are consistently product-focused, quantifying impact and demonstrating end-to-end development, including the HRM Python package (plugin-ready design, CI/CD, 90%+ test coverage) and AWRA-L model deployment (serving thousands of users via awo.bom.gov.au)."
+  - "The 'Side Projects' section, particularly 'Deep Focus Timer', is an exceptional showcase of full-stack development (Next.js, React, Python backend, PostgreSQL, Vercel, Clerk, Jest, Pytest, CI/CD), directly relevant to building data products at Google."
+  - "Clear communication of US permanent residency process addresses potential visa concerns upfront."
+  - "Dedicated 'Research' and 'Selected publications' sections add significant academic credibility and intellectual depth."
+missing:
+  - "Explicit mention of defining and reporting on Key Performance Indicators (KPIs) could be slightly more prominent in Professional Experience bullet points, though product impact is well-covered."
+  - "Consider if 'NetCDF' in Key Skills is the most impactful data format to highlight for a Google Photos product role, or if a more general data pipeline tool could be emphasized."

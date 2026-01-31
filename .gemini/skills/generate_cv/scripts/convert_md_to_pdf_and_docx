@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Check if a markdown file is provided as an argument
+if [ -z "$1" ]; then
+  echo "Usage: $0 <markdown_file>"
+  echo "Example: $0 masters/applied_ml_scientist.md"
+  exit 1
+fi
+
+MD_FILE="$1"
+BASE_NAME=$(basename "$MD_FILE" .md)
+DIR_NAME=$(dirname "$MD_FILE")
+
+# Check if the markdown file exists
+if [ ! -f "$MD_FILE" ]; then
+  echo "Error: Markdown file '$MD_FILE' not found."
+  exit 1
+fi
+
+# Convert to PDF
+PDF_FILE="$DIR_NAME/$BASE_NAME.pdf"
+echo "Converting '$MD_FILE' to PDF: '$PDF_FILE'..."
+pandoc "$MD_FILE" -o "$PDF_FILE" --pdf-engine=xelatex
+if [ $? -eq 0 ]; then
+  echo "Successfully converted to PDF."
+else
+  echo "Error converting to PDF."
+fi
+
+# Convert to DOCX
+DOCX_FILE="$DIR_NAME/$BASE_NAME.docx"
+echo "Converting '$MD_FILE' to DOCX: '$DOCX_FILE'..."
+pandoc "$MD_FILE" -o "$DOCX_FILE"
+if [ $? -eq 0 ]; then
+  echo "Successfully converted to DOCX."
+else
+  echo "Error converting to DOCX."
+fi
+
+echo "Conversion process complete."
