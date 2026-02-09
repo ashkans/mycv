@@ -1,0 +1,73 @@
+---
+description: Analyse job listings from a URL against my CV/experience and rank the best matches. Use when I ask to evaluate, compare, or match jobs to my profile.
+alwaysApply: false
+---
+
+# Job Match Analysis
+
+When the user provides a job listing URL (or asks to evaluate roles against their profile), follow this workflow:
+
+## Step 1: Collect Job Listings
+
+1. Use the Puppeteer MCP tools to navigate to the provided URL.
+2. Take a screenshot to verify the page loaded correctly.
+3. Extract all job titles, locations, and links using `puppeteer_evaluate` with `console.log()` (this MCP returns values via console output, not return values).
+4. If there are multiple pages, navigate through them to collect all relevant listings.
+5. Filter to only ML/AI/Data Science roles (unless the user specifies otherwise).
+
+## Step 2: Read Full Job Descriptions
+
+For each relevant role found in Step 1:
+1. Navigate to the individual job page using Puppeteer.
+2. Extract the full job description text via `puppeteer_evaluate` + `console.log(document.body.innerText)`.
+3. Store the key requirements: technical skills, domain experience, responsibilities.
+
+## Step 3: Load My Profile
+
+Read ALL of the following files to build a complete picture of my skills:
+- `experiences/exp_csiro.md` — Current role (CSIRO, 2023-Present)
+- `experiences/exp_bom.md` — Previous role (Bureau of Meteorology, 2019-2023)
+- `experiences/exp_phd.md` — PhD and early career
+- `experiences/exp_self_taught.md` — Side projects and self-learning
+- `masters/applied_ml_scientist.md` — Master CV template
+
+Also check the `applications/` folder for any prior tailored CVs to the same company.
+
+## Step 4: Analyse and Rank
+
+For each role, produce a comparison table with these columns:
+
+| Requirement | My Match | Evidence |
+|---|---|---|
+
+Score each requirement as: **Strong**, **Good**, **Moderate**, **Partial**, or **Gap**.
+
+Then assign an overall **match score (percentage)** based on:
+- How many requirements are Strong/Good vs Gap
+- Whether the gaps are "must have" or "nice to have"
+- How transferable my existing experience is to the gap areas
+
+## Step 5: Present Results
+
+Rank all roles from best match to weakest and present:
+
+1. **Role name + link** — match score
+2. **Why it matches** — 2-3 sentences connecting my experience to the role
+3. **Key gaps** — what I'd need to address in my application
+4. **Recommendation** — Apply / Stretch / Skip
+
+At the end, give a clear recommendation of which 1-3 roles to prioritise.
+
+## My Core Skills Reference
+
+For quick matching, here is my skill profile:
+
+- **Languages:** Python (Expert), SQL, C++
+- **ML/DL:** PyTorch (LSTM, deep learning), scikit-learn (Random Forest), anomaly detection, time-series forecasting, statistical modeling, optimization, Bayesian methods
+- **MLOps/Infra:** Kubernetes (CronJobs), Docker, Azure, CI/CD, HPC, end-to-end ML system design, testing (90%+ coverage)
+- **Data:** Large-scale data pipelines, geospatial data, NetCDF, real-time data processing
+- **LLM:** LangChain workflows (PoC level)
+- **Web/Backend:** FastAPI, Next.js, React, Vercel, serverless
+- **Research:** PhD, 20+ publications, 590+ citations, NeurIPS reviewer
+- **Leadership:** Supervised 8 students, led teams of 3-4 scientists, cross-functional collaboration
+- **Domain:** Hydrology, climate science, environmental modeling (8+ years)
