@@ -7,49 +7,28 @@ alwaysApply: false
 
 When the user provides a job listing URL (or asks to evaluate roles against their profile), follow this workflow:
 
-## Step 1: Collect Job Listings
+## Single Job Evaluation
 
-1. Use the Puppeteer MCP tools to navigate to the provided URL.
-2. Take a screenshot to verify the page loaded correctly.
-3. Extract all job titles, locations, and links using `puppeteer_evaluate` with `console.log()` (this MCP returns values via console output, not return values).
-4. If there are multiple pages, navigate through them to collect all relevant listings.
-5. Filter to only ML/AI/Data Science roles (unless the user specifies otherwise).
+For a single job URL, delegate to the `/job-match-scorer` subagent. It will open the page, extract the JD, read experience files, and return a structured match report with a score.
 
-## Step 2: Read Full Job Descriptions
+## Batch Job Evaluation (multiple listings page)
 
-For each relevant role found in Step 1:
-1. Navigate to the individual job page using Puppeteer.
-2. Extract the full job description text via `puppeteer_evaluate` + `console.log(document.body.innerText)`.
-3. Store the key requirements: technical skills, domain experience, responsibilities.
+When the URL points to a search results page with multiple listings:
 
-## Step 3: Load My Profile
+### Step 1: Collect Job Listings
 
-Read ALL of the following files to build a complete picture of my skills:
-- `experiences/exp_csiro.md` — Current role (CSIRO, 2023-Present)
-- `experiences/exp_bom.md` — Previous role (Bureau of Meteorology, 2019-2023)
-- `experiences/exp_phd.md` — PhD and early career
-- `experiences/exp_self_taught.md` — Side projects and self-learning
-- `masters/applied_ml_scientist.md` — Master CV template
+1. Open the listings page in the browser.
+2. Extract all job titles, locations, and links from the results.
+3. If there are multiple pages, navigate through them to collect all relevant listings.
+4. Filter to only ML/AI/Data Science roles (unless the user specifies otherwise).
 
-Also check the `applications/` folder for any prior tailored CVs to the same company.
+### Step 2: Score Each Role
 
-## Step 4: Analyse and Rank
+For each relevant role, invoke the `/job-match-scorer` subagent in parallel (up to 4 at a time) with the individual job URL.
 
-For each role, produce a comparison table with these columns:
+### Step 3: Rank and Present Results
 
-| Requirement | My Match | Evidence |
-|---|---|---|
-
-Score each requirement as: **Strong**, **Good**, **Moderate**, **Partial**, or **Gap**.
-
-Then assign an overall **match score (percentage)** based on:
-- How many requirements are Strong/Good vs Gap
-- Whether the gaps are "must have" or "nice to have"
-- How transferable my existing experience is to the gap areas
-
-## Step 5: Present Results
-
-Rank all roles from best match to weakest and present:
+Collect the match reports and rank all roles from best match to weakest:
 
 1. **Role name + link** — match score
 2. **Why it matches** — 2-3 sentences connecting my experience to the role

@@ -61,3 +61,4 @@
 {"arguments":{"script":"console.log(document.body.innerText)"},"level":"debug","message":"Tool call received","service":"mcp-puppeteer","timestamp":"2026-02-09 16:40:10.019","tool":"puppeteer_evaluate"}
 {"level":"debug","message":"Executing script in browser","scriptLength":36,"service":"mcp-puppeteer","timestamp":"2026-02-09 16:40:10.019"}
 {"hasResult":false,"level":"debug","logCount":1,"message":"Script execution result","resultType":"undefined","service":"mcp-puppeteer","timestamp":"2026-02-09 16:40:10.021"}
+{"level":"info","message":"Puppeteer MCP Server closing","service":"mcp-puppeteer","timestamp":"2026-02-09 17:29:35.590"}
