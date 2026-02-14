@@ -7,78 +7,61 @@ location: "Melbourne, Australia"
 
 # Summary
 
-Machine Learning Engineer with a Ph.D. and 8+ years of experience building end-to-end ML systems across the full stack: training, data pipelines, evaluation, and deployment. Track record as a **force multiplier**: designing reusable ML tooling, establishing engineering best practices, and enabling research and product teams to ship faster. Experienced across **Python, PyTorch, Kubernetes, and CI/CD**, with strong communication and cross-team collaboration skills. Seeking to bring platform-minded ML engineering to Canva's AI Platform Enablement team, bridging platform capabilities and product teams to accelerate AI-powered feature delivery through expert guidance, blueprints, and hands-on problem solving.
+Machine Learning Engineer with a PhD and 7+ years of experience building data-driven and ML-based systems in complex, high-stakes environments. Proven track record designing reusable ML tooling, establishing engineering best practices, and enabling research and product teams to move faster. Experienced across Python, PyTorch, and Kubernetes, alongside strong software engineering fundamentals including testing, and CI/CD. Published in Nature Sustainability, with 20+ peer-reviewed publications and conference presentations.
 
 ---
 
-# Skills
+# Key Skills
 
-- **Languages:** Python (Expert), SQL, C++
-- **ML Frameworks:** PyTorch (LSTM, deep learning), Scikit-learn (Random Forest, anomaly detection), LangChain (LLM workflows)
-- **MLOps & Infrastructure:** Kubernetes (CronJobs, pipeline orchestration), Docker, Azure, CI/CD, HPC, end-to-end ML system design
-- **Data Engineering:** Large-scale data pipelines, real-time data processing, geospatial data, NetCDF
-- **Software Engineering:** Testing (90%+ coverage), typed APIs, schema validation, plugin architectures, code review
-- **Backend & Web:** FastAPI, Next.js, React, Vercel, serverless
+- Languages: Python (Expert), SQL
+- Machine Learning: PyTorch (DL), Scikit-learn, LangChain, model evaluation and baseline comparison
+- MLOps & Infrastructure: Kubernetes (CronJobs), Docker, Azure, CI/CD
 
 ---
 
 # Experience
 
-## CSIRO - Research Scientist, Applied ML
+## CSIRO, Melbourne, Research Scientist | Applied ML — 01/2023 – Present
 
-### Melbourne, Australia | Jan 2023 - Present
+- Architected and delivered the Hydrological Reservoir Model (HRM), a production-ready Python package with a plugin-based architecture, typed APIs, schema validation, 90%+ test coverage, and full CI/CD automation. Established a reusable blueprint now adopted by other teams.
+- Developed an end-to-end PyTorch-based LSTM model for streamflow forecasting, owning the full ML lifecycle from feature design and training through evaluation, achieving 20% higher accuracy than baseline methods.
+- Built a real-time data pipeline using Kubernetes CronJobs to process daily climate forecasts, automating anomaly detection and reducing latency by 25%. Separately, engineered a scalable batch pipeline on Azure that processed over 2 million simulations, supporting a study published in Nature Sustainability.
+- Implemented a LangChain-based LLM workflow to analyse 85+ expert responses.
+- Managed all projects as 6 concurrent workstreams, demonstrating effective context-switching across diverse ML domains.
 
-- Architected and delivered the **Hydrological Reservoir Model (HRM)**, a production-ready Python package with a **plugin-based architecture, typed APIs, schema validation, 90%+ test coverage, and full CI/CD automation**. Established a reusable blueprint that other teams now follow for building robust ML packages.
-- Shipped an **end-to-end PyTorch-based LSTM model** for streamflow forecasting, owning the full ML lifecycle from feature design and training through evaluation and deployment, achieving 20% higher accuracy than baseline methods.
-- Built a **real-time data pipeline using Kubernetes CronJobs** to process daily ECMWF climate forecasts, automating anomaly detection and reducing latency by 25%. Demonstrates hands-on experience with K8s-based ML infrastructure.
-- Engineered a **scalable data pipeline on Azure** that processed over 2 million simulations (reduced from months to hours), supporting a high-impact climate adaptation study published in *Nature Sustainability*.
-- Designed an **ML-driven data quality tool** for real-time anomaly detection in national water systems, cutting error detection time by 40% and improving reliability for downstream consumers.
-- Implemented a **LangChain-based LLM workflow** to analyse 85+ expert questionnaire responses, mapping research priorities for CSIRO's sustainability program.
-- Managed multiple concurrent projects simultaneously (HRM package, LSTM model, K8s pipeline, Macquarie analysis, data quality tool, LLM workflow), demonstrating effective context-switching across diverse ML domains.
+## Bureau of Meteorology, Melbourne, Senior Data Scientist (Hydrologist) — 09/2018 – 01/2023
 
-## Bureau of Meteorology (BoM) - Senior Data Scientist
+- Led the scientific development of Australia's national hydrological model (AWRA-L v7), working closely with production teams to maintain a government-scale product, serving thousands of users.
+- Developed and operationalised a Random Forest-based anomaly detection system (70% accuracy on 1M+ data points) and an ML forecasting model for the Australian Fire Danger Rating System (30% accuracy boost), both deployed as core components of national products.
+- Led teams of 3 and 4 engineers across research communication and cross-language model integration (C, Python), demonstrating mentoring and cross-team collaboration skills.
 
-### Melbourne, Australia | Sep 2018 - Jan 2023
+## Monash University, Melbourne, Developer — 12/2019 – 06/2020
 
-- Led the scientific development and **operational ownership** of Australia's national hydrological model (AWRA-L v7), a critical data product serving thousands of users daily at awo.bom.gov.au.
-- Developed and operationalised a **Random Forest-based anomaly detection system** that identified critical infrastructure risks from over 1 million data points with 70% accuracy, deployed as a core component of a national product.
-- Built and integrated an **ML forecasting model** for the Australian Fire Danger Rating System, achieving a 30% accuracy boost for predictions up to 3 months ahead.
-- **Led a team of three scientists** to prepare and communicate technical research findings through comprehensive reports, demonstrating written communication and mentoring skills.
-- **Directed a team of four** to adapt and integrate the Joint UK Land Environment Simulator (JULES) model, written in C and Python, for Australian conditions.
-- Implemented the **Ensemble Kalman Filter** using Bayesian methods and GRACE satellite data to enhance water balance accuracy, bridging advanced statistical research with production model improvements.
-
-## Monash University - Developer
-
-### Melbourne, Australia | Dec 2019 - Jun 2020
-
-- Built a **Python API** for real-time water market simulations, automating decision modelling with eWater SOURCE.
-- Developed an automated tool for assignment generation, saving 300+ hours of manual processing.
-
----
-
-# Education
-
-- **Doctor of Philosophy**, Civil Engineering (Hydrology), Monash University, Melbourne, 2019
-- **Master of Engineering**, University of Tehran, Iran, 2011
-- **Bachelor of Engineering**, University of Tehran, Iran, 2009
+- Built a Python API for real-time water market simulations, automating modelling with eWater SOURCE.
+- Developed an automated assignment generation and marking tool, saving 300+ hours of manual processing per year.
 
 ---
 
 # Side Projects
 
-- **Deep Focus Timer** - Built a full-stack productivity web application with **Next.js** (TypeScript, React) frontend and **Python** backend using **Vercel serverless functions** and **PostgreSQL**. Implemented CI/CD pipelines, automated testing (Jest, Pytest), and deployed on Vercel. https://deepfocus-inky.vercel.app/
-- **HydroGet** - Designed a web application to automate RORB hydrological modelling using **Azure serverless functions, FastAPI, Next.js**. Released an early prototype and iterated on user feedback.
-- **Algorithmic Foundations** - Completed MIT 6.006: Introduction to Algorithms. Maintain consistent LeetCode practice.
-- **C++ Contribution** - Navigated and contributed improvements to the SWIFT hydrological model's large-scale C++ codebase, demonstrating ability to work across languages and complex codebases.
+- Deep Focus Timer: Full-stack web app (Next.js, Python, PostgreSQL, Vercel) with CI/CD and automated testing. https://deepfocus-inky.vercel.app/
+- HydroGet: A web app to automate hydrological modelling (Azure serverless, FastAPI, Next.js).
+
+---
+
+# Education
+
+- Doctor of Philosophy, Civil Engineering, Monash University, Melbourne, Australia, 2019
+- Master of Engineering, University of Tehran, Iran, 2011
+- Bachelor of Engineering, University of Tehran, Iran, 2009
 
 ---
 
 # Research
 
-- 20+ peer-reviewed publications, 590+ citations, h-index 11.
-- 20+ international conference presentations, 3 book chapters, 4 technical reports.
+- 20+ peer-reviewed publications, 600+ citations and 20+ international conference presentations.
 - Supervised 8 students, including 2 final-year projects, 5 master's students, and 1 PhD student.
-- Reviewer for NeurIPS 2025 Climate Change AI (CCAI) Tutorials Track and journal papers on machine learning for hydrology.
+- Reviewer of NeurIPS 2025 Climate Change AI (CCAI) Tutorials Track and journal papers on machine learning for hydrology, including Hydrology & Earth System Sciences, Journal of Hydrology, and Environmental Modelling & Software.
 
 ---
 
